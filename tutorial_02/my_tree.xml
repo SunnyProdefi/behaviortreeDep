@@ -1,0 +1,10 @@
+<root BTCPP_format="4"> <!-- 根元素，属性BTCPP_format表示行为树CPP库的版本为4 -->
+    <BehaviorTree ID="MainTree"> <!-- 定义一个ID为MainTree的行为树 -->
+        <Sequence name="root_sequence"> <!-- 定义一个名为root_sequence的序列节点，序列节点按顺序执行其子节点 -->
+            <SaySomething message="hello" /> <!-- 调用SaySomething节点，发送消息"hello" -->
+            <ThinkWhatToSay text="{the_answer}" /> <!-- 调用ThinkWhatToSay节点，思考要说的内容，并将结果存储在变量the_answer中 -->
+            <SaySomething message="{the_answer}" /> <!-- 再次调用SaySomething节点，这次发送由ThinkWhatToSay节点产生的消息，存储在变量the_answer中的内容 -->
+        </Sequence>
+    </BehaviorTree>
+</root>
+

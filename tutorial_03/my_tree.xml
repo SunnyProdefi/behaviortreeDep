@@ -1,0 +1,11 @@
+<root BTCPP_format="4">  <!-- 行为树的根元素，属性BTCPP_format="4"表示使用的BehaviorTree.CPP库的格式版本为4 -->
+    <BehaviorTree ID="MainTree">  <!-- 定义一个行为树，ID为"MainTree" -->
+        <Sequence name="root">  <!-- 定义一个顺序节点，名称为"root"，其子节点将按顺序执行 -->
+            <CalculateGoal goal="{GoalPosition}" />  <!-- CalculateGoal节点，使用动态输入"{GoalPosition}" -->
+            <PrintTarget target="{GoalPosition}" />  <!-- PrintTarget节点，打印"{GoalPosition}" -->
+            <Script code=" OtherGoal:='-1;3' " />  <!-- Script节点，用于执行脚本，此处设置"OtherGoal"的值为"-1;3" -->
+            <PrintTarget target="{OtherGoal}" />  <!-- PrintTarget节点，打印新设置的"{OtherGoal}" -->
+        </Sequence>
+    </BehaviorTree>
+</root>
+

@@ -1,0 +1,10 @@
+<root BTCPP_format="4"> <!-- 根元素，指明行为树CPP格式版本为4 -->
+    <BehaviorTree ID="MainTree"> <!-- 定义一个ID为MainTree的行为树 -->
+        <Sequence name="root_sequence"> <!-- 定义一个名为root_sequence的序列节点 -->
+            <CheckBattery name="check_battery"/> <!-- 插入一个检查电池状态的任务节点 -->
+            <OpenGripper name="open_gripper"/> <!-- 插入一个打开抓取器的任务节点 -->
+            <ApproachObject name="approach_object"/> <!-- 插入一个接近目标对象的任务节点 -->
+            <CloseGripper name="close_gripper"/> <!-- 插入一个关闭抓取器的任务节点 -->
+        </Sequence>
+    </BehaviorTree>
+</root>

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+project(Tutorial_01)
+add_executable(tutorial_01 main.cpp dummy_nodes.cpp)
+target_link_libraries(tutorial_01 /usr/local/lib/libbehaviortree_cpp.so)
+target_include_directories(tutorial_01 PRIVATE ${BEHAVIORTREEV3_INCLUDE_DIRS})
